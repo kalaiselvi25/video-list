@@ -22,7 +22,7 @@ function filter_assets(){
 }
 add_shortcode('youtube_feed_0','youtube_feed_method');
 function youtube_feed_method(){
-	$API_Key    = 'YOU GOOGLE API KEY'; 
+	$API_Key    = 'YOU GOOGLE API KEY '; 
 	$Channel_ID = 'YOUR CHANNEL ID'; 
 	$Max_Results = 20; 
 	
