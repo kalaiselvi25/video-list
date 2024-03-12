@@ -22,8 +22,8 @@ function filter_assets(){
 }
 add_shortcode('youtube_feed_0','youtube_feed_method');
 function youtube_feed_method(){
-	$API_Key    = 'AIzaSyCPDwVHoBgWcyuvjcWzfgsYmATplaV1vkU'; 
-	$Channel_ID = 'UCj8sngIUAbX0-k5fdGgrKQQ'; 
+	$API_Key    = 'YOU GOOGLE API KEY'; 
+	$Channel_ID = 'YOUR CHANNEL ID'; 
 	$Max_Results = 20; 
 	
 	$api_response = file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=statistics&id='.$Channel_ID.'&fields=items/statistics/subscriberCount&key='.$API_Key);
@@ -40,15 +40,7 @@ function youtube_feed_method(){
 		echo 'Invalid API key or channel ID.'; 
 	}
 
-	$html =  '<div class="owl-carousel owl-theme">
-      <div> Your Content </div>
-      <div> Your Content </div>
-      <div> Your Content </div>
-      <div> Your Content </div>
-      <div> Your Content </div>
-      <div> Your Content </div>
-      <div> Your Content </div>
-    </div>';
+	
 		if(!empty($videoList->items)){ 
 	     echo '<div class="owl-carousel owl-theme youtubecarousel" style="margin:0px 15px;">';
 			foreach($videoList->items as $item){ 
